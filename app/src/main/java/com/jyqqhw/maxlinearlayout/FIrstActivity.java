@@ -26,10 +26,10 @@ import java.util.Map;
  * Created by wj on 16-9-27.
  */
 public class FIrstActivity extends Activity {
-	
+
 	private ListView listView;
 	private List<Map<String, Object>> lists = new ArrayList<>();
-	private Button b1, b2, b3, b4, b5;
+	private Button b1, b2, b3, b4, b5, b6;
 	private MyAdapter adapter;
 	private boolean more;
 	private MaxLinearLayout linearLayout;
@@ -87,12 +87,14 @@ public class FIrstActivity extends Activity {
 		b3 = (Button) findViewById(R.id.bug_3);
 		b4 = (Button) findViewById(R.id.bug_4);
 		b5 = (Button) findViewById(R.id.bug_5);
+		b6 = (Button) findViewById(R.id.bug_6);
 
 		b1.setOnClickListener(clickListener);
 		b2.setOnClickListener(clickListener);
 		b3.setOnClickListener(clickListener);
 		b4.setOnClickListener(clickListener);
 		b5.setOnClickListener(clickListener);
+		b6.setOnClickListener(clickListener);
 	}
 
 	private View.OnClickListener clickListener = new View.OnClickListener() {
@@ -123,6 +125,7 @@ public class FIrstActivity extends Activity {
 						lp.height = 100;
 					}
 					listView.setLayoutParams(lp);
+					linearLayout.requestLayout();
 					break;
 
 				case R.id.bug_5:
@@ -133,6 +136,9 @@ public class FIrstActivity extends Activity {
 						h = 100;
 					}
 					linearLayout.setMaxHeight(h);
+					break;
+				case R.id.bug_6:
+					linearLayout.restore();
 					break;
 				default:
 					break;

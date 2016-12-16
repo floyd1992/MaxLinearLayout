@@ -45,6 +45,13 @@
             android:layout_height="wrap_content"
             android:text="改变maxHeight"/>
 
+
+        <Button
+            android:id="@+id/bug_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="恢复"/>
+
     </LinearLayout>
 
     <com.jyqqhw.maxlinearlayout.MaxLinearLayout
@@ -58,11 +65,45 @@
         android:showDividers="none"
         android:minHeight="100dp" >
 
-        <ListView
-            android:id="@+id/list"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-        </ListView>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="24dp"
+                  android:text="我是标题" />
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="1">
+
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+            </ListView>
+
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content">
+
+            <Button android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="我是按钮1"/>
+
+            <Button android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="我是按钮2"/>
+
+
+
+
+        </LinearLayout>
 
     </com.jyqqhw.maxlinearlayout.MaxLinearLayout>
 

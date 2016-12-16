@@ -10,7 +10,8 @@ import android.widget.LinearLayout;
 public class MaxLinearLayout extends LinearLayout {
 
 	private int maxHeight;
-	private boolean relayout;
+	private boolean relayout, restoreToInit;
+	private int wiM, heM;
 
 	public MaxLinearLayout(Context context) {
 		super(context);
@@ -31,13 +32,22 @@ public class MaxLinearLayout extends LinearLayout {
 
 	@Override
 	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+
+		if(0==wiM && 0==heM){
+			wiM = widthMeasureSpec;
+			heM = heightMeasureSpec;
+		}
 		int measureH = getMeasuredHeight();
 
 		if (0 == maxHeight || 0 == measureH ) {
 			super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 			return;
 		}
-
+		if(restoreToInit){
+			super.onMeasure(wiM, heM);
+			restoreToInit = false;
+			return;
+		}
 		if(relayout){
 			int m = MeasureSpec.makeMeasureSpec(Integer.MAX_VALUE/3,MeasureSpec.AT_MOST);
 			super.onMeasure(m, m);
@@ -65,4 +75,11 @@ public class MaxLinearLayout extends LinearLayout {
 	public int getMaxHeight() {
 		return maxHeight;
 	}
+
+	public void restore(){
+		relayout = true;
+		restoreToInit = true;
+		requestLayout();
+	}
+
 }
