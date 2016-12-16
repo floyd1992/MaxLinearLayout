@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="test bugs:"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <Button
+            android:id="@+id/bug_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="改变visibility"/>
+
+        <Button
+            android:id="@+id/bug_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="改变dataset"/>
+
+        <Button
+            android:id="@+id/bug_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="数据-1"/>
+
+        <Button
+            android:id="@+id/bug_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="改变layout"/>
+
+        <Button
+            android:id="@+id/bug_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="改变maxHeight"/>
+
+    </LinearLayout>
+
+    <!--<com.eebbk.common.widget.UniversalBounceView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="20dp"-->
+    <!--android:layout_marginRight="20dp"-->
+    <!--&gt;-->
+
+    <com.jyqqhw.maxlinearlayout.MaxLinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical"
+        android:divider="?android:attr/dividerHorizontal"
+        android:showDividers="none"
+        android:minHeight="100dp" >
+        <!--android:background="@drawable/alert_round_bottom_selector" -->
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </ListView>
+
+    </com.jyqqhw.maxlinearlayout.MaxLinearLayout>
+
+
+    <!--</com.eebbk.common.widget.UniversalBounceView>-->
+
+</LinearLayout>
