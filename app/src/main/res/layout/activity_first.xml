@@ -47,13 +47,6 @@
 
     </LinearLayout>
 
-    <!--<com.eebbk.common.widget.UniversalBounceView-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_marginLeft="20dp"-->
-    <!--android:layout_marginRight="20dp"-->
-    <!--&gt;-->
-
     <com.jyqqhw.maxlinearlayout.MaxLinearLayout
         android:id="@+id/linear_layout"
         android:layout_width="match_parent"
@@ -64,7 +57,7 @@
         android:divider="?android:attr/dividerHorizontal"
         android:showDividers="none"
         android:minHeight="100dp" >
-        <!--android:background="@drawable/alert_round_bottom_selector" -->
+
         <ListView
             android:id="@+id/list"
             android:layout_width="match_parent"
@@ -72,8 +65,5 @@
         </ListView>
 
     </com.jyqqhw.maxlinearlayout.MaxLinearLayout>
-
-
-    <!--</com.eebbk.common.widget.UniversalBounceView>-->
 
 </LinearLayout>

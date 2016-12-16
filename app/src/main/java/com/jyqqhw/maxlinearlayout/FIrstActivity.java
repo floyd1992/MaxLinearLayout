@@ -25,8 +25,8 @@ import java.util.Map;
 /**
  * Created by wj on 16-9-27.
  */
-public class FIrst9 extends Activity {
-
+public class FIrstActivity extends Activity {
+	
 	private ListView listView;
 	private List<Map<String, Object>> lists = new ArrayList<>();
 	private Button b1, b2, b3, b4, b5;
@@ -37,7 +37,7 @@ public class FIrst9 extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_first_9);
+		setContentView(R.layout.activity_first);
 		init();
 		initBtn();
 	}
@@ -55,7 +55,7 @@ public class FIrst9 extends Activity {
 		listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-				Toast.makeText(FIrst9.this, "list on click item "+position, Toast.LENGTH_SHORT).show();
+				Toast.makeText(FIrstActivity.this, "list on click item "+position, Toast.LENGTH_SHORT).show();
 				Log.i("wj","list on click item "+position);
 			}
 		});
@@ -77,11 +77,6 @@ public class FIrst9 extends Activity {
 				}else{
 					linearLayout.setShowDividers(LinearLayout.SHOW_DIVIDER_BEGINNING);
 				}
-//				if(0 < firstVisibleItem || (0==firstVisibleItem&&view.getTop()>0) ){
-//					linearLayout.setShowDividers(LinearLayout.SHOW_DIVIDER_BEGINNING);
-//				}else{
-//					linearLayout.setShowDividers(LinearLayout.SHOW_DIVIDER_NONE);
-//				}
 			}
 		});
 	}
